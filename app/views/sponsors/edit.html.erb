@@ -1,5 +1,9 @@
 <h1>CAMBIAR IMAGEN</h1>
 <%= form_for @patrocinador do |f| %>
+	<%= f.label :Empresa %> <br> 
+	<%= f.text_field :name %>
+	<%= f.label :Descripcion %> <br> 
+	<%= f.text_area :description %>
 	<%= f.file_field :avatar %> <br>
 	<%= f.submit "Guardar" %> <br>
 <% end %>

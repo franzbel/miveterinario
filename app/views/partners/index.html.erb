@@ -4,7 +4,7 @@
   }
   .col-md-6{
     text-align: center;
-    background-color: ORANGE;
+   
     border: 10px solid transparent;
   }
   .interior {
@@ -24,13 +24,14 @@
         <div class="col-md-6">
             <div class="interior">
               <h3><%= partner.clinic %></h3>
-              <h4><%= partner.doctor %></h2>
+              <h4>Dr. <%= partner.doctor %></h2>
               <hr>
               <h5><%= partner.address %></h5>
               <h5>Telefono: <%= partner.phone %></h5>
               <h5>Celular: <%= partner.cell %></h5>
               <h5>Email: <%= partner.email %></h5>
-              <h5>Sitio: <%= partner.web %></h5>    
+              <h5>Sitio: <%= partner.web %></h5>
+              <%= link_to 'Show', partner, :class => "btn btn-danger" %>    
               <%= link_to 'Edit', edit_partner_path(partner), :class => "btn btn-danger" %>
               <%= link_to 'Destroy', partner, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger" %>
             </div>

@@ -28,6 +28,6 @@ class PreviewsController < ApplicationController
 	end
 	private 
 	def preview_params
-		params.require(:preview).permit(:avatar)
+		params.require(:preview).permit(:avatar, :title, :description)
 	end
 end

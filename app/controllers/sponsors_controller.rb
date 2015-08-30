@@ -31,7 +31,7 @@ class SponsorsController < ApplicationController
 	end
 	private
 	def sponsor_params
-		params.require(:sponsor).permit(:avatar)
+		params.require(:sponsor).permit(:avatar, :name, :description)
 	end
 	def es_administrador
 		redirect_to root_path unless current_user.admin?
