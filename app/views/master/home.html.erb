@@ -3,7 +3,7 @@
     border: 1px solid orange;
   }
   .col-lg-4{
-    border: 1px solid blue;  
+    border: 1px solid border-left: ;  
   }
 </style>
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -16,7 +16,7 @@
       <div class="carousel-inner" role="listbox">
     
         <% @avances.each do |avance|%>
-          <% if avance.id == 1%>
+          <% if avance.id == @avances.first.id%>
             <div class="item active">
               <%= image_tag avance.avatar.url %>
               <div class="container">
