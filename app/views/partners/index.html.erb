@@ -1,8 +1,45 @@
-<p id="notice"><%= notice %></p>
+<style type="text/css">
+  .row{
+    
+  }
+  .col-md-6{
+    text-align: center;
+    background-color: ORANGE;
+    border: 10px solid transparent;
+  }
+  .interior {
+    background-color: transparent;
+    background-image: linear-gradient(to bottom, rgba(30, 87, 153, 0.2) 0%, rgba(125, 185, 232, 0) 100%);
+    background-repeat: repeat;
+    border-radius:10px;
+    padding: 5px;
+}
 
-<h1>Listing Partners</h1>
+</style>
 
-<table>
+<h1>Lista de socios</h1>
+<% cont = 1 %>
+<div class="row">
+    <% @partners.each do |partner| %>
+        <div class="col-md-6">
+            <div class="interior">
+              <h3><%= partner.clinic %></h3>
+              <h4><%= partner.doctor %></h2>
+              <hr>
+              <h5><%= partner.address %></h5>
+              <h5>Telefono: <%= partner.phone %></h5>
+              <h5>Celular: <%= partner.cell %></h5>
+              <h5>Email: <%= partner.email %></h5>
+              <h5>Sitio: <%= partner.web %></h5>    
+              <%= link_to 'Edit', edit_partner_path(partner), :class => "btn btn-danger" %>
+              <%= link_to 'Destroy', partner, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger" %>
+            </div>
+        </div>
+    <% end %>    
+</div>
+
+
+<!-- <table>
   <thead>
     <tr>
       <th>Clinic</th>
@@ -35,5 +72,5 @@
 </table>
 
 <br>
-
-<%= link_to 'New Partner', new_partner_path %>
+ -->
+<%= link_to 'New Partner', new_partner_path,:class => "btn btn-danger" %>
