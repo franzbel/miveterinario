@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
   
+  root 'master#home'
   get 'contact', to: 'messages#new', as: 'contact'
   post 'contact', to: 'messages#create'
 
   resources :partners
   devise_for :users
   
-  root'master#home'
+  
   get 'configuraciones' => 'master#control_panel'
   get 'revistas' => 'master#magazines'
 
