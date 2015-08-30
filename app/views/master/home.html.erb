@@ -12,6 +12,7 @@
       <div class="carousel-inner" role="listbox">
         
         <% @avances.each do |avance|%>
+          <% if avance.id == 1%>
           <div class="item active">
             <%= image_tag avance.avatar.url %>
             <div class="container">
@@ -22,7 +23,19 @@
               </div>
             </div>
             </div>    
-      
+            <% else %>
+              <div class="item">
+            <%= image_tag avance.avatar.url %>
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>Example headline.</h1>
+                <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
+                <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+              </div>
+            </div>
+            </div>
+            <% end %>
+        <% end %>
 
         
       <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
@@ -33,7 +46,7 @@
         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
         <span class="sr-only">Siguiente</span>
       </a>
-        <% end %>
+
     </div><!-- /.carousel -->
 
 
