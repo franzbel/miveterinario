@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
-  root 'master#home'
+  root 'master/home'
   get 'contact', to: 'messages#new', as: 'contact'
   post 'contact', to: 'messages#create'
 
