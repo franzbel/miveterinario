@@ -1,0 +1,22 @@
+<h1>CONFIGURACION - AVANCES</h1>
+<table>
+	<thead>
+		<tr>
+			<th>Logo</th>
+			<th>Cambiar</th>
+			<th>Eliminar</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @avances.each do |avance| %>
+			<tr>
+				<td><%= image_tag avance.avatar.url(:medium) %></td>
+				<td><%= link_to "Cambiar Imagen (editar)", edit_preview_path(avance), :class => "btn btn-info" %></td>
+				<td><%= link_to "Eliminar Imagen (eliminar)",preview_path(avance), method: :delete, :class => "btn btn-danger" %></td>
+			</tr>
+		<% end %>		
+	</tbody>
+</table>
+
+<%= link_to "Nuevo avance", new_preview_path, :class => "btn btn-info" %>
+<%= link_to "Terminar la configuracion", '#', :class => "btn btn-info" %>

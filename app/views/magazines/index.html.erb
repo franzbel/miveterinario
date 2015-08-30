@@ -1,0 +1,11 @@
+<% @magazines.each do |magazine| %>
+    <%= image_tag magazine.avatar.url(:thumb) %>
+    <%= magazine.title %>
+    <%= magazine.description %>
+    <%= link_to "Editar", edit_magazine_path(magazine), :class => "btn btn-info" %>
+    <%= link_to "Mostrar", magazine_path(magazine), :class => "btn btn-info" %>
+    <%= link_to "Eliminar", magazine_path(magazine), method: :delete, :class => "btn btn-info" %>
+    <%= link_to "Agregar paginas", new_magazine_page_path(magazine), :class => "btn btn-info"  %><br/>
+<% end %>
+
+<%= link_to "Nueva revista", new_magazine_path, :class => "btn btn-info"%>

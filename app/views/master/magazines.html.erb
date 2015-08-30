@@ -1,0 +1,27 @@
+
+  <div id="flipbook">
+    <div class="hard page">
+      <%= image_tag @revista.avatar.url(:large) %>
+    </div>
+    <div class="hard page">
+      <%= image_tag @revista.avatar.url(:large) %>
+    </div>
+    <% @paginas.each do |pagina| %>
+        <div class="page"> <%= image_tag pagina.avatar.url(:large) %> </div>
+    <% end %>
+    <div class="hard page">
+      <%= image_tag @revista.avatar.url(:large) %>
+    </div>
+    <div class="hard page">
+      <%= image_tag @revista.avatar.url(:large) %>
+    </div>
+  </div>
+
+
+<script type="text/javascript">
+    $("#flipbook").turn({
+        width: 1205,
+        height: 605,
+        autoCenter: true
+    });
+</script>

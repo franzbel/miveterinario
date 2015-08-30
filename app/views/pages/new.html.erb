@@ -1,0 +1,12 @@
+<h3>Portada</h3>
+<%= image_tag @magazine.avatar.url(:medium) %>
+<% if @last_page.nil? %>
+<% else %>
+    <%= image_tag @last_page.avatar.url(:medium) %>
+<% end %>
+
+<%= form_for [@magazine, @page] do |f| %>
+    <%= f.file_field :avatar %>
+    <%= f.submit "Guardar" %>
+<% end %>
+<%= link_to "Terminar", magazines_path, :class => "btn btn-success" %>

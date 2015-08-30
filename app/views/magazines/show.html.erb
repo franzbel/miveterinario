@@ -1,0 +1,9 @@
+<h1>Portada</h1>
+<%= image_tag @magazine.avatar.url(:medium) %>
+<h1>Titulo</h1>
+<%= @magazine.title %>
+<h1>Resumen</h1>
+<%= @magazine.description %> <br/>
+
+<%= link_to "Editar", edit_magazine_path(@magazine) %>
+<%= link_to "Index", magazines_path %>
