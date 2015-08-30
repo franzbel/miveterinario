@@ -50,7 +50,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'paperclip', '~> 4.3.0'
 gem 'devise'
-gem 'cancancan', '~> 1.12.0'
+
 group :production do 
 	gem 'pg', '0.17.1'
 	gem 'rails_12factor', '0.0.2'
