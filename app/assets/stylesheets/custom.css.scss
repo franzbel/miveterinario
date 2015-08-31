@@ -7,7 +7,10 @@
 
 body {
   padding-bottom: 40px;
-  color: #5a5a5a;
+ 
+  
+  
+  color: #535353;
 }
 
 
@@ -22,7 +25,7 @@ body {
   left: 0;
   z-index: 20;
   margin: 50px;
-
+  
 }
 
 /* Flip around the padding for proper display in narrow viewports */
@@ -41,7 +44,9 @@ body {
 
 }
 .navbar{
-  min-height:80px; //* or whatever height you require
+  min-height:50px; 
+  margin-bottom: 0px;
+
 }
 /* MARKETING CONTENT
 -------------------------------------------------- */
@@ -50,6 +55,7 @@ body {
 .marketing .col-lg-4 {
   margin-bottom: 20px;
   text-align: center;
+
 }
 .marketing h2 {
   font-weight: normal;
@@ -66,6 +72,7 @@ body {
 .carousel {
   height: 500px;
   margin-bottom: 60px;
+
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
@@ -76,6 +83,7 @@ body {
 .carousel .item {
   height: 500px;
   background-color: #777;
+
 }
 .carousel-inner > .item > img {
   position: absolute;
@@ -83,6 +91,8 @@ body {
   left: 0;
   min-width: 100%;
   height: 500px;
+
+
 }
 
 
