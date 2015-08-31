@@ -1,21 +1,76 @@
+<style type="">
+  #contenedor_form{
+    margin-top: 45px;
+
+  }
+  .texto{
+    margin-top: 45px;
+    text-align: center;
+    margin-right: 30%;
+    margin-left: 30%;
+    background-color: rgba(1,0,0,0.2);
+    border-radius: 8px;
+    padding: 25px;
+  }
+  #direccion{
+    margin-top: 50px;
+    float: right;
+    /*border: 1px solid orange;*/
+    border-radius: 15px;
+
+  }
+  .texto_direccion{
+    margin-top: 200px;
+    text-align: center;
+    /*border: 1px solid orange;*/
+    float: left;
+    max-width: 500px;
+  }
+</style>
+<div class="texto">
+  <p>Atentos a tus consultas, escuchamos tus sugerencias. PONTE EN CONTACTO</p>
+</div>
+<div id="contenedor_form">
 <%= form_for @message, url: contact_path do |message_form| %>
-  <fieldset>
-    <div class="field">
-      <%= message_form.text_field :name, placeholder: "Name" %>
-    </div>
-    
-    <div class="field">
-      <%= message_form.email_field :email, placeholder: "Email"%>
-    </div>
-    
-    <div class="field">
-      <%= message_form.text_area :content, placeholder: "Message"%>
-    </div>
-  </fieldset>
   
-  <fieldset>
-    <div class="field">
-      <%= message_form.submit "Send" %>
+    <div class="form-group">
+      <%= message_form.label :Nombre %>
+      <%= message_form.text_field :name, placeholder: "Nombre", :class=>"form-control" %>
     </div>
-  </fieldset>
+    
+    <div class="form-group">
+      <%= message_form.label :Correo %>
+      <%= message_form.email_field :email, placeholder: "Correo", :class=>"form-control"%>
+    </div>
+    
+    <div class="form-group">
+      <%= message_form.label :Mensaje %>
+      <%= message_form.text_area :content, placeholder: "Mensaje", :class=>"form-control"%>
+    </div>
+  
+  
+  
+    <div>
+      <%= message_form.submit "Enviar", :class => "btn btn-default" %>
+    </div>
+  
 <% end %>
+  
+</div>
+<div class="texto">
+  <p>Estamos cerca de ti. Visitanos y podremos responder a tus inquietudes de manera personal.</p>
+</div>
+<div class="texto_direccion">
+  <h4>MI VETERINARIO</h4>
+  <hr>
+  <h4>Av. Cleomedes Blanco Esquina Pacheco</h4>
+  
+  <h4>Telefono: 4260000</h4>
+  <h4>Celular: 10110228</h4>
+  <hr>
+  <h5>Cochabamba-Bolivia</h5>
+  
+</div>
+<div id="direccion">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d4527.622057438028!2d-66.2782751773009!3d-17.399250218930565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sbo!4v1441046512855" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>

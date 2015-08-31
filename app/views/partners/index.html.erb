@@ -17,7 +17,6 @@
 
 </style>
 
-<h1>Lista de socios</h1>
 <% cont = 1 %>
 <div class="row">
     <% @partners.each do |partner| %>
@@ -31,9 +30,16 @@
               <h5>Celular: <%= partner.cell %></h5>
               <h5>Email: <%= partner.email %></h5>
               <h5>Sitio: <%= partner.web %></h5>
-              <%= link_to 'Show', partner, :class => "btn btn-danger" %>    
-              <%= link_to 'Edit', edit_partner_path(partner), :class => "btn btn-danger" %>
-              <%= link_to 'Destroy', partner, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger" %>
+              <% if user_signed_in?%>
+                <% if current_user.admin? %>
+                  <%= link_to 'Show', partner, :class => "btn btn-danger" %>    
+                  <%= link_to 'Edit', edit_partner_path(partner), :class => "btn btn-danger" %>
+                  <%= link_to 'Destroy', partner, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger" %>
+                <% end %>
+
+              <% end %>
+              
+              
             </div>
         </div>
     <% end %>    
@@ -74,4 +80,10 @@
 
 <br>
  -->
-<%= link_to 'New Partner', new_partner_path,:class => "btn btn-danger" %>
+ <% if user_signed_in? %>
+    <% if current_user.admin? %>
+      <%= link_to 'New Partner', new_partner_path,:class => "btn btn-danger" %>
+    <% end %>
+ <% end %>
+
+

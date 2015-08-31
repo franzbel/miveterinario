@@ -1,4 +1,6 @@
 class PartnersController < ApplicationController
+  before_action :es_administrador, only: [:new, :edit, :update, :destroy]
+  
   before_action :set_partner, only: [:show, :edit, :update, :destroy]
 
   # GET /partners
@@ -70,5 +72,8 @@ class PartnersController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def partner_params
       params.require(:partner).permit(:clinic, :doctor, :address, :phone, :cell, :email, :web)
+    end
+    def es_administrador
+      redirect_to root_path unless current_user.admin?
     end
 end

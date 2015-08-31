@@ -31,7 +31,10 @@
             <li><a href="#">One more separated link</a></li>
           </ul>
         </li> -->
-        <% if user_signed_in?%>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <% if user_signed_in?%>
+          
           <li class="sesion"><%= link_to "Cerrar sesion", destroy_user_session_path, :method => :delete %></li>
           <% if current_user.admin? %>
             <li><%= link_to "Panel de administracion", configuraciones_path %></li>
@@ -40,7 +43,9 @@
           <li class="sesion"><%= link_to "Iniciar sesion", new_user_session_path %></li>
            <li class="sesion"><%= link_to "Registrarse", new_user_registration_path %></li>
         <% end %>
-      </ul>
+        </ul>
+        
+      
     </div>
   </div>
 </nav>
