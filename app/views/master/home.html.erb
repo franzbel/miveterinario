@@ -1,9 +1,10 @@
 <style type="text/css">
+  
+  
   .row{
-    border: 1px solid orange;
-  }
-  .col-lg-4{
-    border: 1px solid border-left: ;  
+    
+    margin-right: 15px;
+
   }
 </style>
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -26,9 +27,9 @@
                   <!-- <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p> -->
                 </div>
               </div>
-              </div>    
-            <% else %>
-              <div class="item">
+            </div>    
+          <% else %>
+            <div class="item">
               <%= image_tag avance.avatar.url %>
               <div class="container">
                 <div class="carousel-caption">
@@ -37,11 +38,11 @@
                   <!-- <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p> -->
                 </div>
               </div>
-              </div>
-            <% end %>
+            </div>
+          <% end %>
         <% end %>
 
-        
+      </div>  
       <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
         <span class="sr-only">Atras</span>
@@ -50,16 +51,16 @@
         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
         <span class="sr-only">Siguiente</span>
       </a>
+</div><!-- /.carousel -->
 
-    </div><!-- /.carousel -->
-
+    
 
  <!-- Marketing messaging and featurettes
     ================================================== -->
     <!-- Wrap the rest of the page in another container to center all the content. -->
 
     <div class="container marketing">
-
+      
       <!-- Three columns of text below the carousel -->
       <div class="row">
       <% @patrocinadores.each do |patrocinador| %>
@@ -73,19 +74,6 @@
       </div><!-- /.row -->
 
 
+</div>
 
 
-
-<!-- 
-
-
-<table>
-	<tbody>
-		<% @patrocinadores.each do |patrocinador| %>
-			<tr>
-				<td><%= image_tag patrocinador.avatar.url(:medium) %></td>
-
-			</tr>
-		<% end %>		
-	</tbody>
-</table> -->
