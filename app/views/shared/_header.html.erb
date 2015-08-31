@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="#">
-        <img src=<%=asset_path("logo.jpg") %>/>
+        <img src=<%=asset_path("logo3.png") %>/>
       </a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
@@ -31,13 +31,13 @@
           </ul>
         </li> -->
         <% if user_signed_in?%>
-          <li><%= link_to "Cerrar sesion", destroy_user_session_path, :method => :delete %></li>
+          <li class="sesion"><%= link_to "Cerrar sesion", destroy_user_session_path, :method => :delete %></li>
           <% if current_user.admin? %>
             <li><%= link_to "Panel de administracion", configuraciones_path %></li>
           <% end %>
         <% else %>
-          <li><%= link_to "Iniciar sesion", new_user_session_path %></li>
-           <li><%= link_to "Registrarse", new_user_registration_path %></li>
+          <li class="sesion"><%= link_to "Iniciar sesion", new_user_session_path %></li>
+           <li class="sesion"><%= link_to "Registrarse", new_user_registration_path %></li>
         <% end %>
       </ul>
     </div>
