@@ -10,6 +10,7 @@ body {
  
   
   
+  
   color: #535353;
 }
 
@@ -116,6 +117,8 @@ li {
 #flipbook{
   width:400px;
   height:300px;
+  margin-top: 15px;
+  overflow: hidden;
 }
 
 #flipbook .page{
