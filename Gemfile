@@ -49,6 +49,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'paperclip', '~> 4.3.0'
+gem 'paperclip-dropbox'
 gem 'devise'
 gem 'cancancan', '~> 1.12.0'
 group :production do 
